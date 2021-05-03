@@ -4,12 +4,23 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
+@font-face {
+    src: url("fonts/08SeoulNamsanM_0.ttf"); 
+  	font-family: 'SeoulNamsan';
+}
+
+
+*{
+	box-sizing: border-box;
+	font-family: 'SeoulNamsan';
+}
+
 
 body {
 	margin: 0px;
 	position: relative;
-	width:1920px;
-	height:100%;
+	width:100%;
+	
 	overflow: scroll;
 }
 
@@ -138,15 +149,13 @@ input[type=textarea]{
     		<div class="context">
 	    		<div id="question">	
 	    			${board.question}
-	    			<div id="chart">
-	    				<%@ include file="chart.jsp" %>
-	    			</div>
+	    			
 	    		</div>
 	    	
 	    		<div id="buttons">
-	                <input type="button" name="answer1" maxlength="10" value="${board.answer1}" style="width: 200px"; required>
-	                <font size="10"><b>VS</b></font>
-	                <input type="button" name="answer2" maxlength="10" value="${board.answer2}" style="width: 200px"; required>
+	               <div id="chart">
+	    				<%@ include file="chart.jsp" %>
+	    			</div>
 	            </div>
 	    	</div>
 	    	<div id="list">
